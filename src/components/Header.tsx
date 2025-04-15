@@ -22,7 +22,7 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-4 text-[#333333] text-[18px]">
                 <a href="#" className="font-bold">Home</a>
                 <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>
-                <a href="#" onClick={handleScroll("products")} className="hover:underline">Products</a>
+                <a href="#" onClick={handleScroll("tools")} className="hover:underline">Tools</a>
                 <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>
                 <a href="#" onClick={handleScroll("contribute")} className="hover:underline">Contribute</a>
                 <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>

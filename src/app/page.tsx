@@ -89,8 +89,8 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <SectionTitle text="Products"/>
-                    <section id="products"
+                    <SectionTitle text="Tools"/>
+                    <section id="tools"
                              className="max-w-5xl mx-auto mt-8 px-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                         <div
                             className="bg-white hover:bg-[#e4f1ff] border-2 border-[#333333] rounded-[30px] p-6 flex flex-col justify-between h-[260px] transition-all duration-200 hover:-translate-y-[10px]">

@@ -32,8 +32,16 @@ export default function Home() {
                             <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
                                 It helps you manage versioned configuration repositories on <br/> a per-project basis.
                             </p>
-                            <Button bgColor="bg-[#AEFFDE]" height="h-[42px]" icon="/arrow-right.svg"
-                                    iconPosition="right">
+                            <Button
+                                as="a"
+                                href="https://doguabaris.github.io/corev-cli-docs/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                bgColor="bg-[#AEFFDE]"
+                                height="h-[42px]"
+                                icon="/arrow-right.svg"
+                                iconPosition="right"
+                            >
                                 Read the docs
                             </Button>
                         </div>
@@ -97,6 +105,10 @@ export default function Home() {
                                 basis.</p>
                             <div className="flex items-center gap-3">
                                 <Button
+                                    as="a"
+                                    href="https://github.com/doguabaris/corev-cli"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     icon="/source-icon.svg"
                                     iconPosition="left"
                                     bgColor="bg-[#AEFFDE]"
@@ -107,6 +119,10 @@ export default function Home() {
                                 <Button
                                     icon="/docs-icon.svg"
                                     iconPosition="left"
+                                    as="a"
+                                    href="https://doguabaris.github.io/corev-cli-docs/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Docs
                                 </Button>
@@ -130,9 +146,18 @@ export default function Home() {
                                 and
                                 give feedback — your help is welcome.
                             </p>
-                            <Button height="h-[42px]" icon="/arrow-right.svg" iconPosition="right">
+                            <Button
+                                as="a"
+                                href="https://github.com/doguabaris/corev-cli/blob/main/CONTRIBUTING.md"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                height="h-[42px]"
+                                icon="/arrow-right.svg"
+                                iconPosition="right"
+                            >
                                 Read the contributing guide
                             </Button>
+
                         </div>
                         <div className="flex justify-center md:justify-end">
                             <Image

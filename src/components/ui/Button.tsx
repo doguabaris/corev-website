@@ -18,6 +18,10 @@ interface ButtonProps {
     iconHeight?: number;
     iconOnly?: boolean;
     hideBorder?: boolean;
+    as?: "a" | "button";
+    href?: string;
+    target?: string;
+    rel?: string;
 }
 
 export default function Button({
@@ -36,31 +40,56 @@ export default function Button({
                                    iconHeight,
                                    iconOnly = false,
                                    hideBorder = false,
+                                   as = "button",
+                                   href,
+                                   target,
+                                   rel,
                                }: ButtonProps) {
     const iconW = iconWidth || iconSize;
     const iconH = iconHeight || iconSize;
+
+    const commonClasses = clsx(
+        "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium text-[#333333] transition-colors cursor-pointer",
+        iconOnly ? "p-2 w-[42px] h-[42px]" : "px-5 py-2",
+        !hideBorder && "border-2 border-[#333333]",
+        bgColor,
+        hoverColor,
+        height,
+        className
+    );
+
+    const iconLeft = icon && iconPosition === "left" && (
+        <Image src={icon} alt={iconAlt} width={iconW} height={iconH}/>
+    );
+
+    const iconRight = icon && iconPosition === "right" && (
+        <Image src={icon} alt={iconAlt} width={iconW} height={iconH}/>
+    );
+
+    if (as === "a" && href) {
+        return (
+            <a
+                href={href}
+                target={target}
+                rel={rel}
+                className={commonClasses}
+            >
+                {iconLeft}
+                {!iconOnly && children}
+                {iconRight}
+            </a>
+        );
+    }
 
     return (
         <button
             type={type}
             onClick={onClick}
-            className={clsx(
-                "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium text-[#333333] transition-colors cursor-pointer",
-                iconOnly ? "p-2 w-[42px] h-[42px]" : "px-5 py-2",
-                !hideBorder && "border-2 border-[#333333]",
-                bgColor,
-                hoverColor,
-                height,
-                className
-            )}
+            className={commonClasses}
         >
-            {icon && iconPosition === "left" && (
-                <Image src={icon} alt={iconAlt} width={iconW} height={iconH}/>
-            )}
+            {iconLeft}
             {!iconOnly && children}
-            {icon && iconPosition === "right" && (
-                <Image src={icon} alt={iconAlt} width={iconW} height={iconH}/>
-            )}
+            {iconRight}
         </button>
     );
 }

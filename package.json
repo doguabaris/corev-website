@@ -2,7 +2,7 @@
   "name": "corev-landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://corev.dev/",
+  "homepage": "https://corev.dev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

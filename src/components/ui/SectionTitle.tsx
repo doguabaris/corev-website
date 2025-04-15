@@ -5,7 +5,7 @@ interface SectionTitleProps {
     text: string;
 }
 
-export default function SectionTitle({text}: SectionTitleProps) {
+export default function SectionTitle({ text }: SectionTitleProps) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -14,20 +14,23 @@ export default function SectionTitle({text}: SectionTitleProps) {
     }, []);
 
     return (
-        <div className="flex items-center gap-4 max-w-5xl mx-auto mt-[60px] px-6">
-            <Image
-                src="/cli-icon.svg"
-                alt="Section icon"
-                width={58.69}
-                height={51.34}
-            />
-            <h2
-                className={`text-[36px] font-semibold text-[#333333] transform transition-all duration-700 ease-out ${
-                    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
-                }`}
-            >
-                {text}
-            </h2>
+        <div className="max-w-5xl mx-auto mt-[60px] px-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <Image
+                    src="/cli-icon.svg"
+                    alt="Section icon"
+                    width={58.69}
+                    height={51.34}
+                    className="mx-auto sm:mx-0"
+                />
+                <h2
+                    className={`text-[36px] font-semibold text-[#333333] w-full sm:w-auto text-center sm:text-left transition-all transform duration-700 ease-out ${
+                        visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+                    }`}
+                >
+                    {text}
+                </h2>
+            </div>
         </div>
     );
 }

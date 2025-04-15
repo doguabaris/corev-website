@@ -19,13 +19,11 @@ export default function Home() {
 
     return (
         <>
-            <div className="min-h-screen bg-[#f4faff] text-[#333333] font-sans">
+            <div className="min-h-screen bg-[#f4faff] text-[#333333] font-sans ">
                 <Header/>
-                <main className="flex flex-col items-center text-center md:items-start md:text-left">
-                    <section
-                        className="max-w-5xl mx-auto mt-[60px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10 text-center md:text-left">
-                        <div className="space-y-6">
-                            <h1 className="text-[42px] leading-tight font-semibold text-[#333333]">
+                <section className="max-w-5xl mx-auto mt-[60px] px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-6">
+                    <h1 className="text-[42px] leading-tight font-semibold text-[#333333]">
                                 Manage configs <br/>
                                 <AnimatedHeading/>
                             </h1>
@@ -62,8 +60,8 @@ export default function Home() {
                     </section>
                     <SectionTitle text="Get started"/>
                     <section
-                        className="max-w-5xl mx-auto gap-10 mt-8 px-6 grid grid-cols-1 md:grid-cols-[auto_1fr] items-center">
-                        <div className="space-y-10">
+                        className="max-w-5xl mx-auto gap-10 mt-8 px-6 grid grid-cols-1 md:grid-cols-[auto_1fr] items-baseline">
+                        <div className="space-y-10 items-center text-center sm:items-start sm:text-left flex flex-col">
                             <p className="text-[26px] leading-relaxed text-[#333333]">
                                 Start managing your <br/> versioned configs in seconds.
                             </p>
@@ -139,8 +137,8 @@ export default function Home() {
                     <SectionTitle text="Contribute"/>
                     <section id="contribute"
                              className="max-w-5xl mx-auto mb-[100px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-                        <div className="space-y-6">
-                            <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
+                        <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-6">
+                        <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
                                 Whether you want to fix a bug, suggest a feature, improve documentation, or just try it
                                 out
                                 and
@@ -168,7 +166,6 @@ export default function Home() {
                                 priority/>
                         </div>
                     </section>
-                </main>
                 <Footer/>
             </div>
         </>

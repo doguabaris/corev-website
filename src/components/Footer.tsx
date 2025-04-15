@@ -53,12 +53,10 @@ export default function Footer() {
                 <nav className="hidden md:flex items-center space-x-4 text-[#333333] text-[14px]">
                     <a href="#" className="font-bold">Home</a>
                     <Image src="/slash-icon.svg" alt="/" width={24} height={24}/>
-                    <a href="https://corev.dev/docs" target="_blank" className="hover:underline">Docs</a>
+                    <a href="https://doguabaris.github.io/corev-cli-docs/" target="_blank" className="hover:underline">Docs</a>
                     <Image src="/slash-icon.svg" alt="/" width={24} height={24}/>
                     <a href="https://www.npmjs.com/package/@corev/cli" target="_blank"
-                       className="hover:underline">CLI</a>
-                    <Image src="/slash-icon.svg" alt="/" width={24} height={24}/>
-                    <a href="https://corev.dev/spec" target="_blank" className="hover:underline">Spec</a>
+                       className="hover:underline">NPM</a>
                 </nav>
             </div>
             <div className="text-[12px] text-[#333333] text-center">

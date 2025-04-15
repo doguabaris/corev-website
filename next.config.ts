@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true
     },
+    basePath: '/corev-website',
+    assetPrefix: '/corev-website/',
 };
 
 export default nextConfig;

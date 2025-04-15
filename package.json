@@ -2,7 +2,7 @@
   "name": "corev-landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://doguabaris.github.io/corev-website",
+  "homepage": "https://corev.dev/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

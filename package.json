@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo 'corev.dev' > out/CNAME",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {

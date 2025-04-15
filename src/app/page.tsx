@@ -1,103 +1,151 @@
+'use client';
+
+import SectionTitle from "@/components/ui/SectionTitle";
+import Button from "@/components/ui/Button";
 import Image from "next/image";
+import CopyCommandBox from "@/components/ui/CopyCommandBox";
+import AnimatedHeading from "@/components/ui/AnimatedHeading";
+import {useEffect, useState} from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    const [mounted, setMounted] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    useEffect(() => {
+        const timeout = setTimeout(() => setMounted(true), 100);
+        return () => clearTimeout(timeout);
+    }, []);
+
+    return (
+        <>
+            <div className="min-h-screen bg-[#f4faff] text-[#333333] font-sans">
+                <Header/>
+                <main className="flex flex-col items-center text-center md:items-start md:text-left">
+                    <section
+                        className="max-w-5xl mx-auto mt-[60px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10 text-center md:text-left">
+                        <div className="space-y-6">
+                            <h1 className="text-[42px] leading-tight font-semibold text-[#333333]">
+                                Manage configs <br/>
+                                <AnimatedHeading/>
+                            </h1>
+                            <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
+                                It helps you manage versioned configuration repositories on <br/> a per-project basis.
+                            </p>
+                            <Button bgColor="bg-[#AEFFDE]" height="h-[42px]" icon="/arrow-right.svg"
+                                    iconPosition="right">
+                                Read the docs
+                            </Button>
+                        </div>
+                        <div className="flex justify-center md:justify-end">
+                            <div className="flex justify-center md:justify-end">
+                                <Image
+                                    src="/hero-illustration.svg"
+                                    alt="Hero Illustration"
+                                    width={400}
+                                    height={400}
+                                    priority
+                                    className={`transition-all duration-700 ease-out transform ${
+                                        mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"
+                                    }`}
+                                />
+                            </div>
+                        </div>
+                    </section>
+                    <SectionTitle text="Get started"/>
+                    <section
+                        className="max-w-5xl mx-auto gap-10 mt-8 px-6 grid grid-cols-1 md:grid-cols-[auto_1fr] items-center">
+                        <div className="space-y-10">
+                            <p className="text-[26px] leading-relaxed text-[#333333]">
+                                Start managing your <br/> versioned configs in seconds.
+                            </p>
+                            <CopyCommandBox/>
+                        </div>
+                        <div
+                            className={`hidden md:block bg-white border-2 border-[#333333] rounded-[20px] w-[550px] transition-all duration-700 ease-out transform ${
+                                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                            }`}
+                        >
+                            <div className="flex space-x-2 mb-4 border-b-2 border-[#333333] px-6 pt-4 pb-5">
+                                <span className="w-4 h-4 rounded-full bg-[#C2F8D0]"/>
+                                <span className="w-4 h-4 rounded-full bg-[#E3F1FF]"/>
+                                <span className="w-4 h-4 rounded-full bg-[#D9D9D9]"/>
+                            </div>
+                            <div className="font-mono text-[14px] space-y-[4px] text-[#333333] leading-snug px-6 pb-8">
+                                <p><span className="text-gray-400">~</span></p>
+                                <p><span className="text-[#50B37A]">corev</span> pull atlas</p>
+                                <p><span className="text-[#333333]">⫶</span> Fetching config for &#34;atlas&#34; <a
+                                    href="http://localhost:3000" className="text-[#3C82F6]">http://localhost:3000</a>
+                                </p>
+                                <p><span className="text-[#50B37A]">→</span> Config saved for <span
+                                    className="text-[#3C82F6]">atlas</span> version <span
+                                    className="text-[#50B37A]">1.0.0</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <SectionTitle text="Products"/>
+                    <section id="products"
+                             className="max-w-5xl mx-auto mt-8 px-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div
+                            className="bg-white hover:bg-[#e4f1ff] border-2 border-[#333333] rounded-[30px] p-6 flex flex-col justify-between h-[260px] transition-all duration-200 hover:-translate-y-[10px]">
+
+                            <Image src="/corev-cli-logo.svg" alt="Corev CLI" width={160} height={40} className="mb-6"/>
+                            <p className={"text-[14px] space-y-[4px] text-[#333333]"}>A minimal, open-source CLI tool
+                                for
+                                managing dynamic configuration repositories, with a focus on JSON files, on a
+                                per-project
+                                basis.</p>
+                            <div className="flex items-center gap-3">
+                                <Button
+                                    icon="/source-icon.svg"
+                                    iconPosition="left"
+                                    bgColor="bg-[#AEFFDE]"
+                                >
+                                    Source code
+                                </Button>
+
+                                <Button
+                                    icon="/docs-icon.svg"
+                                    iconPosition="left"
+                                >
+                                    Docs
+                                </Button>
+                                <Image src="/info-icon.svg" alt="Info" width={18} height={18} className="ml-auto"/>
+                            </div>
+                        </div>
+                        <div
+                            className="bg-white border-2 border-[#D9D9D9] rounded-[30px] p-6 flex flex-col justify-center items-center h-[260px] text-[#D9D9D9]">
+                            <Image src="/corev-host-logo.svg" alt="Corev Host" width={160} height={40}
+                                   className="mb-4"/>
+                            <p className="text-lg">Coming soon :)</p>
+                        </div>
+                    </section>
+                    <SectionTitle text="Contribute"/>
+                    <section id="contribute"
+                             className="max-w-5xl mx-auto mb-[100px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                        <div className="space-y-6">
+                            <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
+                                Whether you want to fix a bug, suggest a feature, improve documentation, or just try it
+                                out
+                                and
+                                give feedback — your help is welcome.
+                            </p>
+                            <Button height="h-[42px]" icon="/arrow-right.svg" iconPosition="right">
+                                Read the contributing guide
+                            </Button>
+                        </div>
+                        <div className="flex justify-center md:justify-end">
+                            <Image
+                                src="/contribute-illustration.svg"
+                                alt="Hero Illustration"
+                                width={400}
+                                height={400}
+                                priority/>
+                        </div>
+                    </section>
+                </main>
+                <Footer/>
+            </div>
+        </>
+    );
 }

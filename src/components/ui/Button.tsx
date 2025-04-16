@@ -49,7 +49,7 @@ export default function Button({
     const iconH = iconHeight || iconSize;
 
     const commonClasses = clsx(
-        "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium text-[#333333] transition-colors cursor-pointer",
+        "inline-flex items-center justify-center gap-2 rounded-full text-sm font-bold text-[#333333] transition-colors cursor-pointer",
         iconOnly ? "p-2 w-[42px] h-[42px]" : "px-5 py-2",
         !hideBorder && "border-2 border-[#333333]",
         bgColor,

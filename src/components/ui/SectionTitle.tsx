@@ -5,7 +5,7 @@ interface SectionTitleProps {
     text: string;
 }
 
-export default function SectionTitle({ text }: SectionTitleProps) {
+export default function SectionTitle({text}: SectionTitleProps) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {

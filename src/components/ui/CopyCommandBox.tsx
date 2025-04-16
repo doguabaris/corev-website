@@ -24,7 +24,7 @@ export default function CopyCommandBox() {
 
     return (
         <div
-            className={`flex items-center justify-between border-2 border-[#333333] bg-white px-6 py-[14px] rounded-full w-[400px] h-[65px] transition-all duration-700 ease-out transform ${
+            className={`flex items-center justify-between border-2 border-[#333333] bg-white px-6 py-[14px] rounded-full w-max sm:w-[400px] h-[65px] transition-all duration-700 ease-out transform ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
         >

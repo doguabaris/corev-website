@@ -47,7 +47,8 @@ export default function AnimatedHeading() {
     }, [text, isDeleting, loopNum]);
 
     return (
-        <span className="inline-block font-semibold border-r-2 border-[#333] pr-1 animate-pulse">
+        <span
+            className="inline-block font-semibold border-r-2 border-[#333] pr-1 animate-pulse text-[32px] md:text-[42px]">
       {text}
             {stopped && <span className="sr-only">(animation stopped)</span>}
     </span>

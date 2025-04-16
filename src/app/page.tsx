@@ -8,6 +8,7 @@ import AnimatedHeading from "@/components/ui/AnimatedHeading";
 import {useEffect, useState} from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CommandCarousel from "@/components/ui/CommandCarousel";
 
 export default function Home() {
     const [mounted, setMounted] = useState(false);
@@ -23,7 +24,7 @@ export default function Home() {
                 <Header/>
                 <section className="max-w-5xl mx-auto mt-[60px] px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-6">
-                    <h1 className="text-[42px] leading-tight font-semibold text-[#333333]">
+                    <h1 className="text-[32px] md:text-[42px] leading-tight font-semibold text-[#333333]">
                                 Manage configs <br/>
                                 <AnimatedHeading/>
                             </h1>
@@ -68,7 +69,7 @@ export default function Home() {
                             <CopyCommandBox/>
                         </div>
                         <div
-                            className={`hidden md:block bg-white border-2 border-[#333333] rounded-[20px] w-[550px] transition-all duration-700 ease-out transform ${
+                            className={`hidden md:block bg-white border-2 border-[#333333] rounded-[20px] w-[550px] h-[192px] transition-all duration-700 ease-out transform ${
                                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                             }`}
                         >
@@ -77,16 +78,7 @@ export default function Home() {
                                 <span className="w-4 h-4 rounded-full bg-[#E3F1FF]"/>
                                 <span className="w-4 h-4 rounded-full bg-[#D9D9D9]"/>
                             </div>
-                            <div className="font-mono text-[14px] space-y-[4px] text-[#333333] leading-snug px-6 pb-8">
-                                <p><span className="text-gray-400">~</span></p>
-                                <p><span className="text-[#50B37A]">corev</span> pull atlas</p>
-                                <p><span className="text-[#333333]">⫶</span> Fetching config for &#34;atlas&#34; <a
-                                    href="http://localhost:3000" className="text-[#3C82F6]">http://localhost:3000</a>
-                                </p>
-                                <p><span className="text-[#50B37A]">→</span> Config saved for <span
-                                    className="text-[#3C82F6]">atlas</span> version <span
-                                    className="text-[#50B37A]">1.0.0</span></p>
-                            </div>
+                            <CommandCarousel />
                         </div>
                     </section>
                     <SectionTitle text="Tools"/>

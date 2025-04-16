@@ -100,6 +100,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                                 icon="/source-icon.svg"
                                 iconPosition="left"
+                                iconSize={24}
                                 bgColor="bg-[#AEFFDE]"
                             >
                                 Source code
@@ -111,6 +112,7 @@ export default function Home() {
                                 as="a"
                                 href="https://doguabaris.github.io/corev-cli-docs/"
                                 target="_blank"
+                                iconSize={20}
                                 rel="noopener noreferrer"
                             >
                                 Docs

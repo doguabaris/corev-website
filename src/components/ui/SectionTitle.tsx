@@ -2,10 +2,11 @@ import {useEffect, useState} from "react";
 import Image from "next/image";
 
 interface SectionTitleProps {
-    text: string;
+    text: string,
+    id?: string
 }
 
-export default function SectionTitle({text}: SectionTitleProps) {
+export default function SectionTitle({text, id}: SectionTitleProps) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -14,7 +15,7 @@ export default function SectionTitle({text}: SectionTitleProps) {
     }, []);
 
     return (
-        <div className="max-w-5xl mx-auto mt-[60px] px-6">
+        <div id={id} className="max-w-5xl mx-auto mt-[60px] px-6">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <Image
                     src="/cli-icon.svg"

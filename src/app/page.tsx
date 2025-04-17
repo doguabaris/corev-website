@@ -87,10 +87,8 @@ export default function Home() {
                         className="bg-white hover:bg-[#e4f1ff] border-2 border-[#333333] rounded-[30px] p-6 flex flex-col justify-between h-[260px] transition-all duration-200 hover:-translate-y-[10px]">
 
                         <Image src="/corev-cli-logo.svg" alt="Corev CLI" width={160} height={40} className="mb-6"/>
-                        <p className={"text-[14px] space-y-[4px] text-[#333333]"}>A minimal, open-source CLI tool
-                            for
-                            managing dynamic configuration repositories, with a focus on JSON files, on a
-                            per-project
+                        <p className={"text-[14px] space-y-[4px] text-[#333333]"}>A minimal, open-source CLI tool for
+                            managing dynamic configuration repositories, with a focus on JSON files, on a per-project
                             basis.</p>
                         <div className="flex items-center gap-3">
                             <Button
@@ -131,12 +129,9 @@ export default function Home() {
                 <section
                     className="max-w-5xl mx-auto mb-[100px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
                     <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-6">
-                        <p className="text-[#333333] text-[24px] leading-relaxed max-w-md">
-                            Whether you want to fix a bug, suggest a feature, improve documentation, or just try it
-                            out
-                            and
-                            give feedback — your help is welcome.
-                        </p>
+                        <p className="text-[#333333] text-[24px] leading-relaxed max-w-md"> Whether you want to fix a
+                            bug, suggest a feature, improve documentation, or just try it out and give feedback — your
+                            help is welcome. </p>
                         <Button
                             as="a"
                             href="https://github.com/doguabaris/corev-cli/blob/main/CONTRIBUTING.md"

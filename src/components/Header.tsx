@@ -26,6 +26,9 @@ export default function Header() {
                 <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>
                 <a href="#" onClick={handleScroll("contribute")} className="hover:underline">Contribute</a>
                 <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>
+                <a href="https://github.com/doguabaris/corev-cli/blob/main/ROADMAP.md/" target="_blank"
+                   className="hover:underline">Roadmap</a>
+                <Image src="/slash-icon.svg" alt="/" width={32} height={32}/>
                 <a href="https://doguabaris.github.io/corev-cli-docs/" target="_blank"
                    className="hover:underline">Docs</a>
             </nav>

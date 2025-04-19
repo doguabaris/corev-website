@@ -9,7 +9,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-    title: "Corev — Configs, Under Control.",
+    title: "Corev - Configs, Under Control.",
     description:
         "A minimal, open-source CLI tool for managing dynamic configuration repositories, with a focus on JSON files, on a per-project basis.",
     keywords: [

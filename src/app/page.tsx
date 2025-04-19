@@ -130,7 +130,7 @@ export default function Home() {
                     className="max-w-5xl mx-auto mb-[100px] px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
                     <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-6">
                         <p className="text-[#333333] text-[24px] leading-relaxed max-w-md"> Whether you want to fix a
-                            bug, suggest a feature, improve documentation, or just try it out and give feedback — your
+                            bug, suggest a feature, improve documentation, or just try it out and give feedback, your
                             help is welcome. </p>
                         <Button
                             as="a"

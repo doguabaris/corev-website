@@ -61,7 +61,7 @@ export default function Footer() {
                 </nav>
             </div>
             <div className="text-[12px] text-[#333333] text-center">
-                © 2025 — Corev CLI is open-source software licensed under the MIT License.
+                © 2025 - Corev CLI is open-source software licensed under the MIT License.
             </div>
             <div className="flex items-center gap-4">
                 <a href="https://github.com/doguabaris/corev-cli" target="_blank" rel="noopener noreferrer">

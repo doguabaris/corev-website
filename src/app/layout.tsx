@@ -24,6 +24,29 @@ export const metadata: Metadata = {
         "distributed systems",
         "config CLI"
     ],
+    openGraph: {
+        title: "Corev - Configs, Under Control.",
+        description:
+            "A minimal, open-source CLI tool for managing dynamic configuration repositories, with a focus on JSON files, on a per-project basis.",
+        url: "https://corev.dev",
+        siteName: "Corev",
+        images: [
+            {
+                url: "https://corev.dev/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Corev - Manage configs without the overhead",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Corev - Configs, Under Control.",
+        description:
+            "A minimal, open-source CLI tool for managing dynamic configuration repositories, with a focus on JSON files, on a per-project basis.",
+        images: ["https://corev.dev/og-image.jpg"],
+    },
 };
 
 export default function RootLayout({
